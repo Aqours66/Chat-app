@@ -1,0 +1,159 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#chat-container {
+    width: 500px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #ff69b4;
+    /* Pink color */
+    margin-bottom: 20px;
+}
+
+#message-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #222;
+    margin-bottom: 20px;
+}
+
+.message {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.message strong {
+    color: #ff69b4;
+    /* Pink color */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.message .timestamp {
+    color: #999;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+
+/* Edit and Delete buttons */
+
+.message .edit-btn,
+.message .delete-btn {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    /* Hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.message:hover .edit-btn,
+.message:hover .delete-btn {
+    opacity: 1;
+    /* Show on hover */
+    transition: opacity 0.3s ease;
+}
+
+.message .edit-btn:hover,
+.message .delete-btn:hover {
+    color: #d6006d;
+    /* Darker pink color on hover */
+}
+
+.message .edit-btn:focus,
+.message .delete-btn:focus {
+    outline: none;
+}
+
+.message .delete-btn {
+    color: #ff1493;
+    /* Red color */
+}
+
+#chat-form {
+    display: flex;
+    align-items: center;
+    background-color: #222;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#chat-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    background-color: #333;
+    color: #fff;
+}
+
+#chat-form button {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    /* Pink color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#chat-form button:hover {
+    background-color: #ff1493;
+    /* Darker pink color on hover */
+}
+
+#chat-form button:active {
+    background-color: #d6006d;
+    /* Even darker pink color on active state */
+}
+
+
+/* Customize scrollbar */
+
+#message-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+#message-container::-webkit-scrollbar-thumb {
+    background-color: #ff69b4;
+    /* Pink color */
+    border-radius: 4px;
+}
+
+#message-container::-webkit-scrollbar-track {
+    background-color: #333;
+}
